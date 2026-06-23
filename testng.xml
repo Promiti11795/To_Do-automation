@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Todo Application Test Suite" verbose="1">
+
+    <!-- UI Tests -->
+    <test name="UI Tests">
+        <classes>
+            <class name="tests.TodoTest"/>
+        </classes>
+    </test>
+
+    <!-- API Tests -->
+    <test name="API Tests">
+        <classes>
+            <class name="tests.TodoApiTest"/>
+            <class name="tests.UserApiTest"/>
+        </classes>
+    </test>
+
+</suite>

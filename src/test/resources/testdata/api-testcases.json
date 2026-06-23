@@ -1,0 +1,115 @@
+{
+  "todoTests": {
+    "createTodo": [
+      {
+        "testId": "TC_API_001",
+        "testName": "Create todo with valid data",
+        "description": "Verify POST /todos creates a new todo successfully",
+        "input": {
+          "title": "Learn API Testing with Playwright",
+          "completed": false,
+          "userId": 1
+        },
+        "expectedStatus": 201,
+        "expectedResponse": {
+          "titleShouldMatch": true,
+          "shouldHaveId": true
+        }
+      },
+      {
+        "testId": "TC_API_002",
+        "testName": "Create todo with completed status",
+        "description": "Verify POST /todos with completed=true",
+        "input": {
+          "title": "Already completed task",
+          "completed": true,
+          "userId": 1
+        },
+        "expectedStatus": 201,
+        "expectedResponse": {
+          "titleShouldMatch": true,
+          "completedShouldBeTrue": true
+        }
+      }
+    ],
+    "getTodo": [
+      {
+        "testId": "TC_API_003",
+        "testName": "Get todo by valid ID",
+        "description": "Verify GET /todos/1 returns correct todo",
+        "input": {
+          "todoId": 1
+        },
+        "expectedStatus": 200,
+        "expectedResponse": {
+          "id": 1,
+          "userId": 1
+        }
+      },
+      {
+        "testId": "TC_API_004",
+        "testName": "Get todo by invalid ID",
+        "description": "Verify GET /todos/9999 returns 404",
+        "input": {
+          "todoId": 9999
+        },
+        "expectedStatus": 404
+      }
+    ],
+    "updateTodo": [
+      {
+        "testId": "TC_API_005",
+        "testName": "Update todo title",
+        "description": "Verify PUT /todos/1 updates the title",
+        "input": {
+          "todoId": 1,
+          "title": "Updated: Learn Java Programming",
+          "completed": true,
+          "userId": 1
+        },
+        "expectedStatus": 200
+      }
+    ],
+    "deleteTodo": [
+      {
+        "testId": "TC_API_006",
+        "testName": "Delete existing todo",
+        "description": "Verify DELETE /todos/1 removes the todo",
+        "input": {
+          "todoId": 1
+        },
+        "expectedStatus": 200
+      }
+    ]
+  },
+  "userTests": {
+    "getUser": [
+      {
+        "testId": "TC_API_007",
+        "testName": "Get user by valid ID",
+        "description": "Verify GET /users/1 returns correct user",
+        "input": {
+          "userId": 1
+        },
+        "expectedStatus": 200,
+        "expectedResponse": {
+          "name": "Leanne Graham",
+          "username": "Bret"
+        }
+      }
+    ],
+    "createUser": [
+      {
+        "testId": "TC_API_008",
+        "testName": "Create new user",
+        "description": "Verify POST /users creates a new user",
+        "input": {
+          "name": "John Doe",
+          "username": "johndoe",
+          "email": "john@example.com"
+        },
+        "expectedStatus": 201
+      }
+    ]
+  }
+}
