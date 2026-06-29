@@ -68,46 +68,52 @@
 
 ## 📁 Project Structure
 
+# Playwright Todo Automation
+
+## Project Structure
+
+```text
 playwright-todo-automation/
 │
-├── 📄 README.md                    ← Project documentation
-├── 📄 .gitignore                   ← Files to ignore
-├── 📄 pom.xml                      ← Maven configuration
-├── 📄 testng.xml                   ← TestNG suite
+├── README.md
+├── .gitignore
+├── pom.xml
+├── testng.xml
 │
-└── 📁 src/
-    └── 📁 test/
-        ├── 📁 java/
-        │   ├── 📁 api/
-        │   │   ├── 📄 ApiClient.java
-        │   │   ├── 📄 TodoApiService.java
-        │   │   └── 📄 UserApiService.java
+└── src/
+    └── test/
+        ├── java/
+        │   ├── api/
+        │   │   ├── ApiClient.java
+        │   │   ├── TodoApiService.java
+        │   │   └── UserApiService.java
         │   │
-        │   ├── 📁 models/
-        │   │   ├── 📄 ApiResponse.java
-        │   │   ├── 📄 Todo.java
-        │   │   └── 📄 User.java
+        │   ├── models/
+        │   │   ├── ApiResponse.java
+        │   │   ├── Todo.java
+        │   │   └── User.java
         │   │
-        │   ├── 📁 pages/
-        │   │   ├── 📄 BasePage.java
-        │   │   └── 📄 TodoPage.java
+        │   ├── pages/
+        │   │   ├── BasePage.java
+        │   │   └── TodoPage.java
         │   │
-        │   ├── 📁 tests/
-        │   │   ├── 📄 BaseTest.java
-        │   │   ├── 📄 BaseApiTest.java
-        │   │   ├── 📄 TodoTest.java
-        │   │   ├── 📄 TodoApiTest.java
-        │   │   └── 📄 UserApiTest.java
+        │   ├── tests/
+        │   │   ├── BaseTest.java
+        │   │   ├── BaseApiTest.java
+        │   │   ├── TodoTest.java
+        │   │   ├── TodoApiTest.java
+        │   │   └── UserApiTest.java
         │   │
-        │   └── 📁 utils/
-        │       ├── 📄 ConfigReader.java
-        │       ├── 📄 LoggerUtil.java
-        │       ├── 📄 ThreadManager.java
-        │       ├── 📄 TodoDataProvider.java
-        │       └── 📄 TodoTask.java
+        │   └── utils/
+        │       ├── ConfigReader.java
+        │       ├── LoggerUtil.java
+        │       ├── ThreadManager.java
+        │       ├── TodoDataProvider.java
+        │       └── TodoTask.java
         │
-        └── 📁 resources/
-            ├── 📄 config.properties
-            ├── 📄 allure.properties
-            └── 📁 testdata/
-                └── 📄 api-testcases.json
+        └── resources/
+            ├── config.properties
+            ├── allure.properties
+            └── testdata/
+                └── api-testcases.json
+
