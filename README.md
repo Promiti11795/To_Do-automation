@@ -67,41 +67,47 @@
 ---
 
 ## 📁 Project Structure
-To_Do-automation/
-│
-├── 📁 src/test/java/
-│   │
-│   ├── 📁 api/                          # API Layer
-│   │   ├── 📄 ApiClient.java            # HTTP Client (GET, POST, PUT, DELETE)
-│   │   ├── 📄 TodoApiService.java       # Todo API operations
-│   │   └── 📄 UserApiService.java       # User API operations
-│   │
-│   ├── 📁 models/                       # Data Models (POJOs)
-│   │   ├── 📄 ApiResponse.java          # Generic API response wrapper
-│   │   ├── 📄 Todo.java                 # Todo entity with Builder pattern
-│   │   └── 📄 User.java                 # User entity
-│   │
-│   ├── 📁 pages/                        # Page Object Model
-│   │   ├── 📄 BasePage.java             # Base page with common methods
-│   │   └── 📄 TodoPage.java             # Todo app page object
-│   │
-│   ├── 📁 tests/                        # Test Classes
-│   │   ├── 📄 BaseTest.java             # UI test base (browser setup)
-│   │   ├── 📄 BaseApiTest.java          # API test base (client setup)
-│   │   ├── 📄 TodoTest.java             # UI test cases
-│   │   ├── 📄 TodoApiTest.java          # Todo API test cases
-│   │   └── 📄 UserApiTest.java          # User API test cases
-│   │
-│   └── 📁 utils/                        # Utilities
-│       ├── 📄 ThreadManager.java        # Multithreading utilities
-│       ├── 📄 TodoDataProvider.java     # Stream API examples
-│       └── 📄 TodoTask.java             # Functional Interface
-│
-├── 📁 src/test/resources/
-│   └── 📄 allure.properties             # Allure configuration
-│
-├── 📄 pom.xml                           # Maven configuration
-├── 📄 testng.xml                        # TestNG suite configuration
-├── 📄 .gitignore                        # Git ignore rules
-└── 📄 README.md                         # Project documentation
 
+playwright-todo-automation/
+│
+├── 📄 README.md                    ← Project documentation
+├── 📄 .gitignore                   ← Files to ignore
+├── 📄 pom.xml                      ← Maven configuration
+├── 📄 testng.xml                   ← TestNG suite
+│
+└── 📁 src/
+    └── 📁 test/
+        ├── 📁 java/
+        │   ├── 📁 api/
+        │   │   ├── 📄 ApiClient.java
+        │   │   ├── 📄 TodoApiService.java
+        │   │   └── 📄 UserApiService.java
+        │   │
+        │   ├── 📁 models/
+        │   │   ├── 📄 ApiResponse.java
+        │   │   ├── 📄 Todo.java
+        │   │   └── 📄 User.java
+        │   │
+        │   ├── 📁 pages/
+        │   │   ├── 📄 BasePage.java
+        │   │   └── 📄 TodoPage.java
+        │   │
+        │   ├── 📁 tests/
+        │   │   ├── 📄 BaseTest.java
+        │   │   ├── 📄 BaseApiTest.java
+        │   │   ├── 📄 TodoTest.java
+        │   │   ├── 📄 TodoApiTest.java
+        │   │   └── 📄 UserApiTest.java
+        │   │
+        │   └── 📁 utils/
+        │       ├── 📄 ConfigReader.java
+        │       ├── 📄 LoggerUtil.java
+        │       ├── 📄 ThreadManager.java
+        │       ├── 📄 TodoDataProvider.java
+        │       └── 📄 TodoTask.java
+        │
+        └── 📁 resources/
+            ├── 📄 config.properties
+            ├── 📄 allure.properties
+            └── 📁 testdata/
+                └── 📄 api-testcases.json
